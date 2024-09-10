@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linked In Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <img src="./img/logo.png" alt="">
+            </a>
+            <div class="search-box">
+                <img src="./img/search.png" alt="">
+                <input type="text" placeholder="Search">
+            </div>
+        </div>
+        <div class="navbar-center">
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <img src="./img/home.png" alt=""><span>Home</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/network.png" alt=""><span>My Network</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/jobs.png" alt=""><span>Jobs</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/message.png" alt=""><span>Messages</span></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./img/notification.png" alt=""><span>Notification</span></a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <div class="online">
+
+                <img src="./img/7.jpg" class="nav-profile-img" onclick="toggleMenu()">
+            </div>
+        </div>
+
+        <div class="profile-menu-wrap" id="profileMenu">
+            <div class="profille-menu">
+                <div class="user-info">
+                    <img src="./img/7.jpg"  width="100%">
+                   <div>
+                    <h3>Maryama Mohamed</h3>
+                    <a href="./profile.html">See your Profile</a>
+                   </div>
+                </div>
+                <hr>
+                <a href="#" class="profile-menu-link">
+                    <img src="./img/feedback.png" alt="">
+                    <p>Give feedback</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./img/setting.png" alt="">
+                    <p>Settings & Privacy</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./img/help.png" alt="">
+                    <p>Help & Support</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./img/display.png" alt="">
+                    <p>Display & Accessibility</p>
+                    <span>></span>
+                </a>
+                <a href="#" class="profile-menu-link">
+                    <img src="./img/logout.png" alt="">
+                    <p>Log Out</p>
+                    <span>></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+<!--     
+/* ----------------navbar end---------------- */ -->
+<div class="container">
+    <div class="left-sidebar">
+       <div class="sidebar-profile-box">
+        <img src="./img/cover-pic.png" width="100%">
+        <div class="sidebar-profile-info">
+            <img src="./img/7.jpg">
+            <h1>Maryama Mohamed</h1>
+            <p>Web Developer At Microsoft</p>
+            <ul>
+                <li>Your Profile Views <span>120</span></li>
+                <li>Your Post Views <span>1,020</span></li>
+                <li>Your Connections<span>50</span></li>
+            </ul>
+        </div>
+        <div class="sidebar-profile-link">
+            <a href="#">
+                <img src="./img/items.png">My items</a>
+            <a href="#">
+                <img src="./img/premium.png">Try premium</a>
+        </div>
+       </div>
+       <div class="sidebar-activity" id="sidebarActivity">
+        <h3>RECENTS</h3>
+        <a href="#"><img src="./img/recent.png">Web Development</a>
+        <a href="#"><img src="./img/recent.png">User Interface</a>
+        <a href="#"><img src="./img/recent.png">Online Learning</a>
+        <a href="#"><img src="./img/recent.png">Dugsiiye Online Courses</a>
+        <a href="#"><img src="./img/recent.png">Code Better</a>
+        <a href="#"><img src="./img/recent.png">Somali Programmers</a>
+        <h3>GROUPS</h3>
+        <a href="#"><img src="./img/group.png">Web Design Group</a>
+        <a href="#"><img src="./img/group.png">Graphic Design Group</a>
+        <a href="#"><img src="./img/group.png">HTML & CSS Learners</a>
+        <a href="#"><img src="./img/group.png">PHP & MYSQL Learners</a>
+        <a href="#"><img src="./img/group.png">FLUTTER Learners Group</a>
+        <h3>HASHTAG</h3>
+        <a href="#"><img src="./img/hashtag.png">Somali Programmers</a>
+        <a href="#"><img src="./img/hashtag.png">Coding</a>
+        <a href="#"><img src="./img/hashtag.png">Online Learners</a>
+        <a href="#"><img src="./img/hashtag.png">Somali Designers</a>
+        <div class="discover-more-link">
+            <a href="#">Discover More</a>
+        </div>
+       </div>
+       <p id="show-more-link" onclick="toggleActivity()">Show More <b>+</b></p>
+    </div>
+    <div class="main-content">
+        <div class="create-post">
+            <div class="create-post-input">
+                <img src="./img/7.jpg" width="100%" alt="">
+                <textarea name="" id=""  rows="2" placeholder="Write a Post"></textarea>
+            </div>
+            <div class="create-post-links">
+                <li><img src="./img/photo.png">Photo </li>
+                <li><img src="./img/video.png">Vedio </li>
+                <li><img src="./img/event.png">Event </li>
+                <li>Post</li>
+            </div>
+        </div>
+        <div class="sort-by">
+            <hr>
+            <p>Sort by: <span>Top<img src="./img/down-arrow.png" alt=""></span></p>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/12.jpg">
+                <div>
+                    <h1>Adna Shariif</h1>
+                    <small>Founder of CEO at Gellelio | Angel Investor</small>
+                    <small>2 hours ago</small>
+                </div>
+            </div>
+            <p>The success of every website depends on search engine optimization and degital marketing strategies. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/post-image-1.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Laila Haji and 75 Others </span>
+                </div>
+                <div>
+                    <span>22 Comments &middot; 30 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/23.jpg" width="100%">
+                <div>
+                    <h1>Laila Muhudiin</h1>
+                    <small>Founder of WHO at Gellelio | Angel Investor</small>
+                    <small>12 hours ago</small>
+                </div>
+            </div>
+            <p>Khudbeeyayaasha dunida ugu caansani waxa ay ahaayeen dad
+                akhrisku saameeyay, oo noloshooda uu ka muuqdo. Qofka
+                qoraaga ah ee guulaysta, ama khudbeeyaha ah ee guulaystaa,
+                waa qofba qofka uu akhriskiisu ka sarreeyo. </p>
+            <img src="./img/post-image-2.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Najma Mohamed and 75 Others </span>
+                </div>
+                <div>
+                    <span>52 Comments &middot; 33 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/x.jpg">
+                <div>
+                    <h1>Najma Mohamed</h1>
+                    <small>Founder of Jaziira Hospital at Somalia </small>
+                    <small>1 day ago</small>
+                </div>
+            </div>
+            <p>Health Science is worth while! healthy Science if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/feed-image-5.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Laila and 75 Others </span>
+                </div>
+                <div>
+                    <span>1.2K Comments &middot; 300 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/20.jpg">
+                <div>
+                    <h1>Maaida Mohamud</h1>
+                    <small>Nursing Student Lives Somalia </small>
+                    <small>2 days ago</small>
+                </div>
+            </div>
+            <p>The success of every website depends on search engine optimization and degital marketing strategies. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/post-image-3.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Laila Haji and 75 Others </span>
+                </div>
+                <div>
+                    <span>22 Comments &middot; 30 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/19.jpg">
+                <div>
+                    <h1>Fahma Abdishakuur</h1>
+                    <small>Midwifery student In Mogadishu-Somalia</small>
+                    <small>25-april-2024</small>
+                </div>
+            </div>
+            <p>Dadkaasi, iyo kuwo
+            kalaba, waxa ay noqdeen dad wax badan og. Qofku haddii
+            uu wax badan og yahayna, wax badan ayuu sheegi karaa. </p>
+            <img src="./img/post-image-4.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Faaisa and 75 Others </span>
+                </div>
+                <div>
+                    <span>22 Comments &middot; 30 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/member-9.png">
+                <div>
+                    <h1>Abdullahi</h1>
+                    <small>Founder of CEO at Gellelio </small>
+                    <small>2 hours ago</small>
+                </div>
+            </div>
+            <p>The success of every website depends on search engine optimization and degital marketing strategies. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/feed-image-1.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Mohamed and 75 Others </span>
+                </div>
+                <div>
+                    <span>52 Comments &middot; 40 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/user-5.png">
+                <div>
+                    <h1>Mohamed</h1>
+                    <small>Founder of CEO Angel Investor</small>
+                    <small>23 hours ago</small>
+                </div>
+            </div>
+            <p>Khudbeeyayaasha dunida ugu caansani waxa ay ahaayeen dad
+                akhrisku saameeyay, oo noloshooda uu ka muuqdo. Qofka
+                qoraaga ah ee guulaysta, ama khudbeeyaha ah ee guulaystaa,
+                waa qofba qofka uu akhriskiisu ka sarreeyo. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/feed-image-2.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">abdullahi and 75 Others </span>
+                </div>
+                <div>
+                    <span>2.2k Comments &middot; 3,230 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/user-1.png">
+                <div>
+                    <h1>Yuusuf</h1>
+                    <small>Founder of Angel Investor in Somalia</small>
+                    <small>12 hours ago</small>
+                </div>
+            </div>
+            <p>The success of every website depends on search engine optimization and degital marketing strategies. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/feed-image-3.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">ahmed and 75 Others </span>
+                </div>
+                <div>
+                    <span>202 Comments &middot; 45 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/status-3.png">
+                <div>
+                    <h1>Ahmed</h1>
+                    <small>Founder of Jtech Academy</small>
+                    <small>2 hours ago</small>
+                </div>
+            </div>
+            <p>The success of every website depends on search engine optimization and degital marketing strategies. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/advertisement.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">Laila Haji and 75 Others </span>
+                </div>
+                <div>
+                    <span>22 Comments &middot; 30 Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post-author">
+                <img src="./img/user-2.png">
+                <div>
+                    <h1>Saacid Leejo</h1>
+                    <small>Founder of  Gellelio | Angel Investor</small>
+                    <small>2 Mounths ago</small>
+                </div>
+            </div>
+            <p>The success of every website depends on search engine optimization and degital marketing strategies. if you are on frist page of all major search engines then you are ahead among your compitors. </p>
+            <img src="./img/post-image-4.png" width="100%" alt="">
+            <div class="post-status">
+                <div>
+                    <img src="./img/thumbsup.png" alt="">
+                    <img src="./img/love.png "alt="">
+                    <img src="./img/clap.png" alt="">
+                    <span class="liked-users">mohamed and 75 Others </span>
+                </div>
+                <div>
+                    <span>29.2k Comments &middot; 32.3k Shares </span>
+                </div>
+            </div>
+            <div class="post-activity">
+                <div>
+                    <img src="./img/7.jpg" class="post-activity-user-icon" alt="">
+                    <img src="./img/down-arrow.png" class="post-activity-arow-icon" alt="">
+                </div>
+                <div class="post-activity-links"> 
+                    <img src="./img/like.png" alt="">
+                    <span>Like</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/send.png" alt="">
+                    <span>Send</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/comment.png" alt="">
+                    <span>Comment</span>
+                </div>
+                <div class="post-activity-links">
+                    <img src="./img/share.png" alt="">
+                    <span>Share</span>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="right-sidebar">
+        <div class="sidebar-news">
+            <img src="./img/more.png" class="info-icon">
+            <h3>Trending News</h3>
+            <a href="#">Hight demand for skilled Man Power</a>
+            <span>1 day ago &middot; 10,934 readers</span>
+
+            <a href="#">Careers growing horizontally too</a>
+            <span>2 days ago &middot; 20,934 readers</span>
+
+            <a href="#">Less work visa for us more for uk</a>
+            <span>17h ago &middot; 6,934 readers</span>
+
+            <a href="#">More hiring = higher confidence?</a>
+            <span>1h  ago &middot; 1,034 readers</span>
+
+            <a href="#">Guatm adani is the worlds third richest</a>
+            <span>4 days ago &middot; 40,934 readers</span>
+
+            <a href="#" class="read-more-link">Read More</a>
+        </div>
+        <div class="sidebar-ad">
+            <small>Ad &middot; &middot; &middot; &middot;</small>
+            <p>Master the 5 principles of web desig</p>
+            <div>
+                <img src="./img/7.jpg" alt="">
+                <img src="./img/mi-logo.png" alt="">
+            </div>
+            <b>Brand and Demand in Xiomi</b>
+            <a href="#" class="add-link">Learn More</a>
+        </div>
+        <div class="sidebar-useful-links">
+            <a href="#">About</a>
+            <a href="#">Accesibility</a>
+            <a href="#">Help Center</a>
+            <a href="#">Privacy Policy<a>
+            <a href="#">Advertising</a>
+            <a href="#">Get the App</a>
+            <a href="#">More</a>
+            <div class="copyriht-msg">
+                <img src="./img/logo.png">
+                <p>LinkedIn &#169; 2024. All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>
